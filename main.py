@@ -17,7 +17,7 @@ aresta = (
     )
 
 
-def Quadrado():
+def Triangulo():
     glBegin(GL_LINES)
 
     for temp_aresta in aresta:
@@ -42,15 +42,15 @@ def main():
         -3  #Z
     )
 
-    glRotatef(45,  # angulo de retação
-              0,  # x
-              0,  # y
+    glRotatef(80,  # angulo de rotação
+              2,  # x
+              2,  # y
               0  # z
               )  # Transformação geometrica de rotação
 
 
 
-    glColor3f(1,1,0)
+    glColor3f(2,2,1)
 
     while True:
         for event in pygame.event.get():
@@ -60,7 +60,7 @@ def main():
 
 
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
-        Quadrado()
+        Triangulo()
         pygame.display.flip()
         #pygame.time.wait(10)
 
